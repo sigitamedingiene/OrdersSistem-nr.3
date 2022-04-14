@@ -42,6 +42,7 @@
             this.OrderPreviewButton.TabIndex = 0;
             this.OrderPreviewButton.Text = "Užsakymo peržiūra";
             this.OrderPreviewButton.UseVisualStyleBackColor = false;
+            this.OrderPreviewButton.Click += new System.EventHandler(this.OrderPreviewButton_Click);
             // 
             // textBox1
             // 

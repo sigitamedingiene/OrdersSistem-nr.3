@@ -17,5 +17,9 @@ namespace OrdersSistem_nr._4_
             InitializeComponent();
         }
 
+        private void OrderPreviewButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
