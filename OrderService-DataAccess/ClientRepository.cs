@@ -4,5 +4,6 @@ namespace OrderService_DataAccess
 {
     public class ClientRepository
     {
+
     }
 }
