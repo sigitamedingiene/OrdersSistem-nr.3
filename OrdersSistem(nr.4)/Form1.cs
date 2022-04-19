@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,16 +21,20 @@ namespace OrdersSistem_nr._4_
             InitializeComponent();
         }
 
-        private void OrderPreviewButton_Click(object sender, EventArgs e)
+        private void GenerateReportButton_Click(object sender, EventArgs e)
         {
-            ClientLisGenerator clientsList = new ClientLisGenerator();
-            clientsList.clientListGenerator();
-            textBox.AppendText("Kliengtų ataskaita sugeneruota");
-
             ClientRepository clientRepo = new ClientRepository();
-            clientRepo.ClientsRepository();
-            textBox.AppendText($"{clientRepo.ClientsRepository()}");
+            List<Client> clientList = clientRepo.Deserialaizer();
+            //nepamirsk sita perkelti i metoda, ir pataisyti, kad viena dokumenta sugeneruotu, o ne 500 su vienu klientu.
+            for (int i = 0; i < clientList.Count; i++)
+            {
+                var report = $"Vardas: {clientList[i].FirstName};\r\n Pavarde: {clientList[i].LastName}; \r\n Gyvenamasis adresas: {clientList[i].Adress}; \r\n Elektroninio pasto adresas: {clientList[i].Email}\r\n";
+                var fileName = "ClientReport.txt";
+                var path = @$"C:\Users\Vartotojas\source\repos\Lesson-15\OrdersSistem(nr.4)\{fileName}";
+                File.WriteAllText(path, report);
+            }
             
+
         }
     }
 }

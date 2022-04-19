@@ -28,28 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.OrderPreviewButton = new System.Windows.Forms.Button();
+            this.GenerateReportButton = new System.Windows.Forms.Button();
             this.textBox = new System.Windows.Forms.TextBox();
             this.PaimentButton = new System.Windows.Forms.Button();
+            this.PrewieOrderbutton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // OrderPreviewButton
+            // GenerateReportButton
             // 
-            this.OrderPreviewButton.BackColor = System.Drawing.Color.Peru;
-            this.OrderPreviewButton.Location = new System.Drawing.Point(36, 28);
-            this.OrderPreviewButton.Name = "OrderPreviewButton";
-            this.OrderPreviewButton.Size = new System.Drawing.Size(213, 29);
-            this.OrderPreviewButton.TabIndex = 0;
-            this.OrderPreviewButton.Text = "Užsakymo peržiūra";
-            this.OrderPreviewButton.UseVisualStyleBackColor = false;
-            this.OrderPreviewButton.Click += new System.EventHandler(this.OrderPreviewButton_Click);
+            this.GenerateReportButton.BackColor = System.Drawing.Color.Peru;
+            this.GenerateReportButton.Location = new System.Drawing.Point(36, 28);
+            this.GenerateReportButton.Name = "GenerateReportButton";
+            this.GenerateReportButton.Size = new System.Drawing.Size(213, 29);
+            this.GenerateReportButton.TabIndex = 0;
+            this.GenerateReportButton.Text = "Generuoti klientų ataskaitą";
+            this.GenerateReportButton.UseVisualStyleBackColor = false;
+            this.GenerateReportButton.Click += new System.EventHandler(this.GenerateReportButton_Click);
             // 
             // textBox
             // 
             this.textBox.Location = new System.Drawing.Point(36, 65);
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(213, 350);
+            this.textBox.ReadOnly = true;
+            this.textBox.Size = new System.Drawing.Size(213, 62);
             this.textBox.TabIndex = 1;
             // 
             // PaimentButton
@@ -62,14 +65,34 @@
             this.PaimentButton.Text = "Pay";
             this.PaimentButton.UseVisualStyleBackColor = false;
             // 
+            // PrewieOrderbutton
+            // 
+            this.PrewieOrderbutton.Location = new System.Drawing.Point(42, 143);
+            this.PrewieOrderbutton.Name = "PrewieOrderbutton";
+            this.PrewieOrderbutton.Size = new System.Drawing.Size(207, 29);
+            this.PrewieOrderbutton.TabIndex = 3;
+            this.PrewieOrderbutton.Text = "Peržiūrėti užsakymą";
+            this.PrewieOrderbutton.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(40, 190);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(209, 225);
+            this.textBox1.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PrewieOrderbutton);
             this.Controls.Add(this.PaimentButton);
             this.Controls.Add(this.textBox);
-            this.Controls.Add(this.OrderPreviewButton);
+            this.Controls.Add(this.GenerateReportButton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -79,8 +102,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button OrderPreviewButton;
+        private System.Windows.Forms.Button GenerateReportButton;
         private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Button PaimentButton;
+        private System.Windows.Forms.Button PrewieOrderbutton;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

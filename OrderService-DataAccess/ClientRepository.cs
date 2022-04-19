@@ -7,14 +7,21 @@ using System.Text.Json;
 namespace OrderService_DataAccess
 {
     public class ClientRepository
-    {
-        public List<Client> ClientsRepository()
+    {  
+        public void ClientsRepository()
+        {
+           
+           
+        }
+
+        public List<Client> Deserialaizer()
         {
             var path = @"C:\Users\Vartotojas\source\repos\Lesson-15\OrdersSistem(nr.4)\clients.json";
             var jsonString = File.ReadAllText(path);
             List<Client> clients = JsonSerializer.Deserialize<List<Client>>(jsonString);
-
             return clients;
         }
+
+
     }
 }
