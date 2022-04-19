@@ -22,20 +22,13 @@ namespace OrdersSistem_nr._4_
 
         private void OrderPreviewButton_Click(object sender, EventArgs e)
         {
-            ClientLisGenerator clientList = new ClientLisGenerator();
-            clientList.clientListGenerator();
+            ClientLisGenerator clientsList = new ClientLisGenerator();
+            clientsList.clientListGenerator();
             textBox.AppendText("Kliengtų ataskaita sugeneruota");
 
             ClientRepository clientRepo = new ClientRepository();
-            List<Client> clienList = clientRepo.Retrieve();
-            for (int i = 0; i < clienList.Count; i++)
-            {
-                textBox.AppendText(clienList[i].FirstName);
-                textBox.AppendText(clienList[i].LastName);
-                textBox.AppendText(clienList[i].Adress);
-                textBox.AppendText(clienList[i].Email);
-                
-            }
+            clientRepo.ClientsRepository();
+            textBox.AppendText($"{clientRepo.ClientsRepository()}");
             
         }
     }

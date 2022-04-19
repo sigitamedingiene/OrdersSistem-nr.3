@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderSistem_Business;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,11 @@ namespace OrderService_DataAccess
 {
     public class OrderRepository
     {
+        private List<Order> order { get; }
+
+        public OrderRepository()
+        {   order = new List<Order>();
+
+        }
     }
 }

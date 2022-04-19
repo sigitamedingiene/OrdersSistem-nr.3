@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrderSistem_Business;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
@@ -23,7 +24,7 @@ namespace ClientList_Generator
                 Name += vowels[r.Next(vowels.Length)];
                 b++;
             }
-            return $"FirstName: {Name}";
+            return Name;
         }
         public string GenerateRandomLastName(int length)
         {
@@ -41,7 +42,7 @@ namespace ClientList_Generator
                 Name += vowels[r.Next(vowels.Length)];
                 b++;
             }
-            return $"LastName: {Name}";
+            return Name;
         }
         public string GenerateRandomAdress(int length)
         {
@@ -63,7 +64,7 @@ namespace ClientList_Generator
                 Adress += vowels[adress.Next(vowels.Length)];
                 b++;
             }
-            return $"Adress: {Adress} str. House No.{house} Apartment No.{apartment}";
+            return $"{Adress} str. House No.{house} Apartment No.{apartment}";
         }
         public string GenerateRandomEmail(int length)
         {
@@ -81,28 +82,23 @@ namespace ClientList_Generator
                 Email += vowels[email.Next(vowels.Length)];
                 b++;
             }
-            return $"Email: {Email}@mail.com";
+            return $"{Email}@mail.com";
         }
+
 
         public void clientListGenerator()
         {
-            List<string> clientList = new List<string>();
-            for (int i = 0; i < 50; i++)
+            List<Client> clientList = new List<Client>();
+            for (int i = 0; i < 500; i++)
             {
-                clientList.Add(GenerateRandomName(6));
-                clientList.Add(GenerateRandomLastName(7));
-                clientList.Add(GenerateRandomAdress(5));
-                clientList.Add(GenerateRandomEmail(8));
-                clientList.Add("---------------------");
-            }
+                Client client = new Client(GenerateRandomName(6), GenerateRandomLastName(7), GenerateRandomAdress(5), GenerateRandomEmail(8));
+                clientList.Add(client);               
+               
+            }           
 
-
-            var filename = "clients.txt";
-            var path = @$"C:\Users\Vartotojas\source\repos\Lesson-15\OrdersSistem(nr.4)\{filename}";
-            File.WriteAllLines(path, clientList);
-
+            var options = new JsonSerializerOptions { WriteIndented = true };
             var jsonFilename = "clients.json";
-            string jsonString = JsonSerializer.Serialize(clientList);
+            string jsonString = JsonSerializer.Serialize(clientList, options);
             var jsonPath = @$"C:\Users\Vartotojas\source\repos\Lesson-15\OrdersSistem(nr.4)\{jsonFilename}";
             File.WriteAllText(jsonPath, jsonString);
             
