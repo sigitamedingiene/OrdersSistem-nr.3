@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClientList_Generator;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,9 @@ namespace OrdersSistem_nr._4_
 
         private void OrderPreviewButton_Click(object sender, EventArgs e)
         {
-
+            ClientLisGenerator clientList = new ClientLisGenerator();
+            clientList.clientListGenerator();
+            textBox.AppendText("Kliengtų ataskaita sugeneruota");
         }
     }
 }

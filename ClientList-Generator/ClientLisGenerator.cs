@@ -78,8 +78,8 @@ namespace ClientList_Generator
             }
 
 
-            var filename = "clients.json";
-            var path = @$"C:\Users\Vartotojas\source\repos\Saved files\{filename}";
+            var filename = "clients.txt";
+            var path = @$"C:\Users\Vartotojas\source\repos\Lesson-15\OrdersSistem(nr.4)\{filename}";
             File.WriteAllLines(path, clientList);
         }
         

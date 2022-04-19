@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.OrderPreviewButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.PaimentButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,13 +44,13 @@
             this.OrderPreviewButton.UseVisualStyleBackColor = false;
             this.OrderPreviewButton.Click += new System.EventHandler(this.OrderPreviewButton_Click);
             // 
-            // textBox1
+            // textBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(36, 65);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 350);
-            this.textBox1.TabIndex = 1;
+            this.textBox.Location = new System.Drawing.Point(36, 65);
+            this.textBox.Multiline = true;
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(213, 350);
+            this.textBox.TabIndex = 1;
             // 
             // PaimentButton
             // 
@@ -68,7 +68,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.PaimentButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox);
             this.Controls.Add(this.OrderPreviewButton);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -80,7 +80,7 @@
         #endregion
 
         private System.Windows.Forms.Button OrderPreviewButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Button PaimentButton;
     }
 }

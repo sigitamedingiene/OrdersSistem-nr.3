@@ -8,4 +8,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClientList-Generator\ClientList-Generator.csproj" />
+  </ItemGroup>
+
 </Project>
