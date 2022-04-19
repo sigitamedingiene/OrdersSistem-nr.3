@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ClientList-Generator\ClientList-Generator.csproj" />
+    <ProjectReference Include="..\OrderService-DataAccess\OrderService-DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,6 @@
 ﻿using ClientList_Generator;
+using OrderService_DataAccess;
+using OrderSistem_Business;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +25,18 @@ namespace OrdersSistem_nr._4_
             ClientLisGenerator clientList = new ClientLisGenerator();
             clientList.clientListGenerator();
             textBox.AppendText("Kliengtų ataskaita sugeneruota");
+
+            ClientRepository clientRepo = new ClientRepository();
+            List<Client> clienList = clientRepo.Retrieve();
+            for (int i = 0; i < clienList.Count; i++)
+            {
+                textBox.AppendText(clienList[i].FirstName);
+                textBox.AppendText(clienList[i].LastName);
+                textBox.AppendText(clienList[i].Adress);
+                textBox.AppendText(clienList[i].Email);
+                
+            }
+            
         }
     }
 }
