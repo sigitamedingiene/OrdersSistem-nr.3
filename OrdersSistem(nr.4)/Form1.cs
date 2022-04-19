@@ -24,17 +24,20 @@ namespace OrdersSistem_nr._4_
         private void GenerateReportButton_Click(object sender, EventArgs e)
         {
             ClientRepository clientRepo = new ClientRepository();
-            List<Client> clientList = clientRepo.Deserialaizer();
-            //nepamirsk sita perkelti i metoda, ir pataisyti, kad viena dokumenta sugeneruotu, o ne 500 su vienu klientu.
-            for (int i = 0; i < clientList.Count; i++)
+            clientRepo.Deserialaizer();
+            textBox.AppendText("Kliento ataskaita sugeneruota sekimngai.");//nebaigta         
+            
+        }
+
+        private void PrewieOrderbutton_Click(object sender, EventArgs e)
+        {   
+            OrderRepository orderList = new OrderRepository();
+            List<Order> orders = orderList.Retrieve();
+            for (int i = 0; i < orders.Count; i++)
             {
-                var report = $"Vardas: {clientList[i].FirstName};\r\n Pavarde: {clientList[i].LastName}; \r\n Gyvenamasis adresas: {clientList[i].Adress}; \r\n Elektroninio pasto adresas: {clientList[i].Email}\r\n";
-                var fileName = "ClientReport.txt";
-                var path = @$"C:\Users\Vartotojas\source\repos\Lesson-15\OrdersSistem(nr.4)\{fileName}";
-                File.WriteAllText(path, report);
+                textBox1.AppendText($"Užsakymo numeris: {orders[i].Id}.\r\n Užsakovas: {orders[i].Client.FirstName}  {orders[i].Client.LastName};\r\n Paslauga: {orders[i].Service.Name} \r\n Kaina: {orders[i].CountPrice()}\r\n\r\n");
             }
             
-
         }
     }
 }

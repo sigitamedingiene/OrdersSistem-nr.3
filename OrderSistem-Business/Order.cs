@@ -22,5 +22,12 @@ namespace OrderSistem_Business
             DateTimeCreated = dateTimeCreated;
             Quantity = quantity;
         }
+
+        public decimal CountPrice()
+        {
+            decimal price = 0;
+            price = Quantity * Service.Price;
+            return price;
+        }
     }
 }

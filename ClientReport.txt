@@ -1,4 +1,0 @@
-Vardas: Durune;
- Pavarde: Parareci; 
- Gyvenamasis adresas: Tycosru str. House No.139 Apartment No.31; 
- Elektroninio pasto adresas: b2g3c1v8@mail.com

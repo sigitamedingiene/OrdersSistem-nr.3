@@ -58,11 +58,11 @@
             // PaimentButton
             // 
             this.PaimentButton.BackColor = System.Drawing.Color.Lime;
-            this.PaimentButton.Location = new System.Drawing.Point(255, 386);
+            this.PaimentButton.Location = new System.Drawing.Point(467, 421);
             this.PaimentButton.Name = "PaimentButton";
-            this.PaimentButton.Size = new System.Drawing.Size(96, 29);
+            this.PaimentButton.Size = new System.Drawing.Size(321, 29);
             this.PaimentButton.TabIndex = 2;
-            this.PaimentButton.Text = "Pay";
+            this.PaimentButton.Text = "Generuoti nemokių klinetų ataskaitą";
             this.PaimentButton.UseVisualStyleBackColor = false;
             // 
             // PrewieOrderbutton
@@ -71,8 +71,9 @@
             this.PrewieOrderbutton.Name = "PrewieOrderbutton";
             this.PrewieOrderbutton.Size = new System.Drawing.Size(207, 29);
             this.PrewieOrderbutton.TabIndex = 3;
-            this.PrewieOrderbutton.Text = "Peržiūrėti užsakymą";
+            this.PrewieOrderbutton.Text = "Peržiūrėti užsakymus";
             this.PrewieOrderbutton.UseVisualStyleBackColor = true;
+            this.PrewieOrderbutton.Click += new System.EventHandler(this.PrewieOrderbutton_Click);
             // 
             // textBox1
             // 
@@ -80,7 +81,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(209, 225);
+            this.textBox1.Size = new System.Drawing.Size(613, 225);
             this.textBox1.TabIndex = 4;
             // 
             // Form1
