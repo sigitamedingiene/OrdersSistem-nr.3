@@ -1,6 +1,7 @@
 ﻿using OrderSistem_Business;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,12 +10,12 @@ namespace OrderService_DataAccess
 {
     public class OrderRepository
     {
-        private List<Order> order { get; set; }
+        private List<Order> order { get; }
 
         public OrderRepository()
         {
             ClientRepository clientRepo = new ClientRepository();
-            List<Client> clients = clientRepo.Retrieve();         
+            List<Client> clients = clientRepo.Retrieve();
             Client client1 = new Client(clients[0].FirstName, clients[0].LastName, clients[0].Adress, clients[0].Email);
             Client client2 = new Client(clients[1].FirstName, clients[1].LastName, clients[1].Adress, clients[1].Email);
             Client client3 = new Client(clients[2].FirstName, clients[2].LastName, clients[2].Adress, clients[2].Email);
@@ -28,9 +29,9 @@ namespace OrderService_DataAccess
             Service service5 = new Service("Pečių masažas", "Atpalaiduojantis pečių masažas, trukmė 30min.", 15.90m);
 
             var time1 = DateTime.Now;
-            var time2 = DateTime.Now.AddHours(3);
+            var time2 = DateTime.Now.AddDays(1);
             var time3 = DateTime.Now.AddDays(2);
-            
+
 
             order = new List<Order>();
             order.Add(new Order(1, client1, service1, time1, 1, true));
@@ -53,6 +54,30 @@ namespace OrderService_DataAccess
         public List<Order> Retrieve()
         {
             return order;
+        }
+
+        public void GenerateClientsNotPaidList()
+        {
+            List<string> clientsNotPaid = new List<string>();
+            for (int i = 0; i < order.Count; i++)
+            {
+                if (order[i].IsPaid == false)
+                {
+                    clientsNotPaid.Add(order[i].Client.FirstName);
+                    clientsNotPaid.Add(order[i].Client.LastName);
+                    clientsNotPaid.Add(order[i].Client.Email);
+                    clientsNotPaid.Add(order[i].Service.Name);
+                    clientsNotPaid.Add(order[i].DateTimeCreated.ToShortDateString());
+                    clientsNotPaid.Add(order[i].Service.Price.ToString());
+                    clientsNotPaid.Add("-----------------------");
+
+                }
+            }
+            
+            var file = "ClientsNotPaid.txt";
+            var path = @$"C:\Users\Vartotojas\source\repos\Lesson-15\OrdersSistem(nr.4)\{file}";
+            File.WriteAllLines(path, clientsNotPaid);
+
         }
     }
 }
