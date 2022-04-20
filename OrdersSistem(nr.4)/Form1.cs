@@ -41,7 +41,27 @@ namespace OrdersSistem_nr._4_
 
         private void PaimentButton_Click(object sender, EventArgs e)
         {
-            
+            OrderRepository orderList = new OrderRepository();
+            List<Order> orders = orderList.Retrieve();
+            List<string> clientsNotPaid = new List<string>();
+            for (int i = 0; i < orders.Count; i++)
+            {               
+               if(orders[i].IsPaid == false)
+                {
+                    clientsNotPaid.Add(orders[i].Client.FirstName);
+                    clientsNotPaid.Add(orders[i].Client.LastName);
+                    clientsNotPaid.Add(orders[i].Client.Email);
+                    clientsNotPaid.Add(orders[i].Service.Name);
+                    clientsNotPaid.Add(orders[i].Service.Price.ToString());
+                    clientsNotPaid.Add("-----------------------");
+
+                }
+                
+            }
+            var file = "ClientsNotPaid.txt";
+            var path = @$"C:\Users\Vartotojas\source\repos\Lesson-15\OrdersSistem(nr.4)\{file}";
+            File.WriteAllLines(path, clientsNotPaid);
+            MessageBox.Show("Ataskaita sugeneruota sėkmingai");
         }
     }
 }
