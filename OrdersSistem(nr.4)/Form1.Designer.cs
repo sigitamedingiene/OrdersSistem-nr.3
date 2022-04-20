@@ -64,6 +64,7 @@
             this.PaimentButton.TabIndex = 2;
             this.PaimentButton.Text = "Generuoti nemokių klinetų ataskaitą";
             this.PaimentButton.UseVisualStyleBackColor = false;
+            this.PaimentButton.Click += new System.EventHandler(this.PaimentButton_Click);
             // 
             // PrewieOrderbutton
             // 
@@ -81,6 +82,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(613, 225);
             this.textBox1.TabIndex = 4;
             // 

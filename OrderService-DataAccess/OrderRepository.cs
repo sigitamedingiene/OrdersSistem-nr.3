@@ -14,7 +14,7 @@ namespace OrderService_DataAccess
         public OrderRepository()
         {
             ClientRepository clientRepo = new ClientRepository();
-            List<Client> clients = clientRepo.Deserialaizer();         
+            List<Client> clients = clientRepo.Retrieve();         
             Client client1 = new Client(clients[0].FirstName, clients[0].LastName, clients[0].Adress, clients[0].Email);
             Client client2 = new Client(clients[1].FirstName, clients[1].LastName, clients[1].Adress, clients[1].Email);
             Client client3 = new Client(clients[3].FirstName, clients[3].LastName, clients[3].Adress, clients[3].Email);
@@ -28,9 +28,9 @@ namespace OrderService_DataAccess
             var time3 = DateTime.Now.AddHours(3);
 
             order = new List<Order>();
-            order.Add(new Order(1, client1, service1, time1, 1));
-            order.Add(new Order(2, client2, service2, time2, 1));
-            order.Add(new Order(3, client3, service3, time3, 1));
+            order.Add(new Order(1, client1, service1, time1, 1, true));
+            order.Add(new Order(2, client2, service2, time2, 1, false));
+            order.Add(new Order(3, client3, service3, time3, 1, true));
         }
 
         public List<Order> Retrieve()
