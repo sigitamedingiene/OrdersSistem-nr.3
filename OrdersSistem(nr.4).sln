@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersSistem(nr.4)", "OrdersSistem(nr.4)\OrdersSistem(nr.4).csproj", "{9BA59BD3-CD09-40E6-B2DA-A0926BBA9DB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdersSistem(nr.4)", "OrdersSistem(nr.4)\OrdersSistem(nr.4).csproj", "{9BA59BD3-CD09-40E6-B2DA-A0926BBA9DB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderSistem-Business", "OrderSistem-Business\OrderSistem-Business.csproj", "{34DD6F7A-BB20-490F-B2B7-F279AE46AB1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderSistem-Business", "OrderSistem-Business\OrderSistem-Business.csproj", "{34DD6F7A-BB20-490F-B2B7-F279AE46AB1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService-DataAccess", "OrderService-DataAccess\OrderService-DataAccess.csproj", "{D8ED7356-57E3-466D-A446-1DF84FC9EC7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService-DataAccess", "OrderService-DataAccess\OrderService-DataAccess.csproj", "{D8ED7356-57E3-466D-A446-1DF84FC9EC7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientList-Generator", "ClientList-Generator\ClientList-Generator.csproj", "{8FA0447D-5FB2-46E9-AA66-3FA2911B4113}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientList-Generator", "ClientList-Generator\ClientList-Generator.csproj", "{8FA0447D-5FB2-46E9-AA66-3FA2911B4113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deserialaizer", "Deserialaizer\Deserialaizer.csproj", "{0312D9EC-925B-46FE-A82B-425B127E9494}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8FA0447D-5FB2-46E9-AA66-3FA2911B4113}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FA0447D-5FB2-46E9-AA66-3FA2911B4113}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FA0447D-5FB2-46E9-AA66-3FA2911B4113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0312D9EC-925B-46FE-A82B-425B127E9494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0312D9EC-925B-46FE-A82B-425B127E9494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0312D9EC-925B-46FE-A82B-425B127E9494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0312D9EC-925B-46FE-A82B-425B127E9494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

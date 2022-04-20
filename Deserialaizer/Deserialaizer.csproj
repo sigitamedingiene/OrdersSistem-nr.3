@@ -2,11 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>OrderService_DataAccess</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Deserialaizer\Deserialaizer.csproj" />
     <ProjectReference Include="..\OrderSistem-Business\OrderSistem-Business.csproj" />
   </ItemGroup>
 
