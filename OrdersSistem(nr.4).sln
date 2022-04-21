@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientList-Generator", "Cli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deserialaizer", "Deserialaizer\Deserialaizer.csproj", "{0312D9EC-925B-46FE-A82B-425B127E9494}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{05A1D7FD-7241-4B0D-A97D-EFED865FF6DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0312D9EC-925B-46FE-A82B-425B127E9494}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0312D9EC-925B-46FE-A82B-425B127E9494}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0312D9EC-925B-46FE-A82B-425B127E9494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05A1D7FD-7241-4B0D-A97D-EFED865FF6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05A1D7FD-7241-4B0D-A97D-EFED865FF6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05A1D7FD-7241-4B0D-A97D-EFED865FF6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05A1D7FD-7241-4B0D-A97D-EFED865FF6DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
