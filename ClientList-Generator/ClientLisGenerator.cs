@@ -99,11 +99,11 @@ namespace ClientList_Generator
             var options = new JsonSerializerOptions { WriteIndented = true };
             var jsonFilename = "clients.json";
             string jsonString = JsonSerializer.Serialize(clientList, options);
-            var jsonPath = @$"C:\Users\Vartotojas\source\repos\Lesson-15\OrdersSistem(nr.4)\{jsonFilename}";
+            var jsonPath = @$"..\..\..\..\..\..\OrdersSistem(nr.4)\{jsonFilename}";
             File.WriteAllText(jsonPath, jsonString);
 
             var report = "client.txt";
-            var path = @$"C:\Users\Vartotojas\source\repos\Lesson-15\OrdersSistem(nr.4)\{report}";
+            var path = @$"..\..\..\..\..\..\OrdersSistem(nr.4)\{report}";
             File.WriteAllText(path, jsonString);
 
 
