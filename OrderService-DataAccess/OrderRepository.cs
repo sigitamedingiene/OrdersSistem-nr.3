@@ -56,9 +56,11 @@ namespace OrderService_DataAccess
             return order;
         }
 
+        
         public void GenerateClientsNotPaidList()
         {
             List<string> clientsNotPaid = new List<string>();
+
             for (int i = 0; i < order.Count; i++)
             {
                 if (order[i].IsPaid == false)
@@ -73,7 +75,7 @@ namespace OrderService_DataAccess
 
                 }
             }
-            
+
             var file = "ClientsNotPaid.txt";
             var path = @$"C:\Users\Vartotojas\source\repos\Lesson-15\OrdersSistem(nr.4)\{file}";
             File.WriteAllLines(path, clientsNotPaid);

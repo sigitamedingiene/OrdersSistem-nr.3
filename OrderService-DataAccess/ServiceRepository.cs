@@ -26,5 +26,10 @@ namespace OrderService_DataAccess
         {
             return service;
         }
+
+        public List<Service> RetrieveServicePrice(decimal price)
+        {
+            return service;
+        }
     }
 }
