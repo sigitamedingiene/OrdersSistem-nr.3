@@ -10,7 +10,11 @@ namespace Deserialaizer
     {
         public List<Client> DeserialaizeClientsList()
         {
-            var path = @"..\..\..\..\..\..\clients.json";
+
+            var path = @"C:\Users\Vartotojas\source\repos\Lesson-15\OrdersSistem(nr.4)\clients.json";
+
+            var path = @"C:\Users\Vartotojas\source\repos\Lesson-15\OrdersSistem(nr.4)\clients.json";
+
             var jsonString = File.ReadAllText(path);
             List<Client> clientsList = JsonSerializer.Deserialize<List<Client>>(jsonString);
             return clientsList;
